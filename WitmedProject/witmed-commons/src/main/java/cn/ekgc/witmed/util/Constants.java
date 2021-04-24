@@ -38,4 +38,9 @@ public class Constants {
 	 * <b>Token 过期时间</b>
 	 */
 	public static final Long TOKEN_EXPIRE_MILLIS = Long.parseLong(props.getProperty("token.expire.millis"));
+
+	/**
+	 * <b>Redis 过期时间</b>
+	 */
+	public static final Long REDIS_EXPIRE_MILLIS = Long.parseLong(props.getProperty("redis.expire.millis"));
 }
