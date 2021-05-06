@@ -23,12 +23,12 @@
 	</properties>
 
 	<dependencies>
-		<!-- 配置 Spring Cloud Netflix Eureka Client 依赖 [BEGIN] -->
+		<!-- 配置 Spring Cloud Starter Netflix Eureka Client 依赖 [BEGIN] -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<!-- 配置 Spring Cloud Netflix Eureka Client 依赖 [END] -->
+		<!-- 配置 Spring Cloud Starter Netflix Eureka Client 依赖 [END] -->
 
 		<!-- 配置 Spring Cloud Starter OpenFegin 依赖 [BEGIN] -->
 		<dependency>
