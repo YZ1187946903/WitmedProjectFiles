@@ -1,19 +1,17 @@
-package cn.ekgc.witmed.base.pojo.entity;
+package cn.ekgc.witmed.base.pojo.vo;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * <b>基础实体信息</b>
+ * <b>基础视图信息</b>
  * @author Arthur
  * @version 1.0.0
  */
-public class BaseEntity implements Serializable {
-	private static final long serialVersionUID = 3563582030558185082L;
+public class BaseVO implements Serializable {
+	private static final long serialVersionUID = 7512361690727574184L;
 	private String status;                          // 系统状态：0-禁用，1-启用
-	private String createUser;                      // 创建人
 	private Date createTime;                        // 创建时间
-	private String updateUser;                      // 修改人
 	private Date updateTime;                        // 修改时间
 
 	public String getStatus() {
@@ -24,28 +22,12 @@ public class BaseEntity implements Serializable {
 		this.status = status;
 	}
 
-	public String getCreateUser() {
-		return createUser;
-	}
-
-	public void setCreateUser(String createUser) {
-		this.createUser = createUser;
-	}
-
 	public Date getCreateTime() {
 		return createTime;
 	}
 
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
-	}
-
-	public String getUpdateUser() {
-		return updateUser;
-	}
-
-	public void setUpdateUser(String updateUser) {
-		this.updateUser = updateUser;
 	}
 
 	public Date getUpdateTime() {

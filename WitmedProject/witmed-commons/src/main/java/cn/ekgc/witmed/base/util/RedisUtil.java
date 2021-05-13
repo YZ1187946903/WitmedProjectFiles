@@ -1,4 +1,4 @@
-package cn.ekgc.witmed.util;
+package cn.ekgc.witmed.base.util;
 
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +34,7 @@ public class RedisUtil {
 		// 将对应的数据存储到 Redis 中
 		redisTemplate.opsForValue().set(key, jsonStr);
 		// 设定存储到 Redis 的过期时间
-		if (expireMillis != null && expireMillis > 0) {
-			// 时间有效，则使用所给定的时间
-			redisTemplate.expire(key, expireMillis, TimeUnit.MILLISECONDS);
-		} else {
-			// 时间无效则使用默认时间
-			redisTemplate.expire(key, Constants.REDIS_EXPIRE_MILLIS, TimeUnit.MILLISECONDS);
-		}
+		redisTemplate.expire(key, expireMillis, TimeUnit.MILLISECONDS);
 	}
 
 	/**

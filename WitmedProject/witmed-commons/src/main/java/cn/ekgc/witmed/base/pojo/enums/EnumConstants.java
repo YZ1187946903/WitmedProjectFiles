@@ -3,7 +3,7 @@ package cn.ekgc.witmed.base.pojo.enums;
 import java.util.Properties;
 
 /**
- * <b>智慧医疗-枚举信息常量类</b>
+ * <b>枚举信息常量类</b>
  * @author Arthur
  * @version 1.0.0
  */
@@ -13,7 +13,7 @@ class EnumConstants {
 	static {
 		try {
 			// 加载配置文件 enums.properties
-			props.load(EnumConstants.class.getClassLoader().getResourceAsStream("props/enums.properties"));
+			props.load(EnumConstants.class.getClassLoader().getResourceAsStream("props/base/enums.properties"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -64,13 +64,6 @@
 		</dependency>
 		<!-- 配置 PageHelper Spring Boot Starter 依赖 [END] -->
 
-		<!-- 配置 Spring Boot Starter Data Redis 依赖 [BEGIN] -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<!-- 配置 Spring Boot Starter Data Redis 依赖 [END] -->
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

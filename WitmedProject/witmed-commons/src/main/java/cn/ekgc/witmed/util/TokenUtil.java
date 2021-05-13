@@ -21,15 +21,16 @@ import java.util.Map;
  * @version 1.0.0
  */
 public class TokenUtil {
+
 	// 设定生成 Token 的加密算法
-	private static Algorithm algorithm = Algorithm.HMAC256(Constants.TOKEN_SECRET_KEY);
+	private static Algorithm algorithm = Algorithm.HMAC256(ConstantUtils.SECRET_KEY);
 
 	/**
 	 * <b>使用认证用户主键生成 Token 信息</b>
-	 * @param id
+	 * @param params
 	 * @return
 	 */
-	public static String createToken(String id) {
+	public static String createToken(Map<String, Object> params) {
 		// 创建 JWTCreator 对象
 		JWTCreator.Builder builder = JWT.create();
 		// 对于生成的最终 Token 由三部分组成：头部信息（格式和算法）、有效载荷和签名
@@ -42,9 +43,9 @@ public class TokenUtil {
 		// 创建头部信息
 		builder.withHeader(headerMap);
 		// 2、设定有效载荷
-		builder.withClaim("id", id);
+		builder.withClaim("messages", params);
 		// 设定该 Token 的有效时间，计算过期时间
-		Long expireTime = System.currentTimeMillis() + Constants.TOKEN_EXPIRE_MILLIS;
+		Long expireTime = System.currentTimeMillis() + ConstantUtils.TOKEN_EXPIRE_MILLIS;
 		builder.withExpiresAt(new Date(expireTime));
 		// 3、设定签名，生成 Token
 		String token = builder.sign(algorithm);
@@ -57,7 +58,7 @@ public class TokenUtil {
 	 * @param token
 	 * @return
 	 */
-	public static String verifyToken(String token) {
+	public static Map<String, Object> verifyToken(String token) {
 		// 校验此时所给定的 Token 是符合相关形式的
 		if (token != null && !"".equals(token.trim())) {
 			// 此时 Token 格式有效
@@ -67,10 +68,10 @@ public class TokenUtil {
 			DecodedJWT decodedJWT = verifier.verify(token);
 			// 如果能够获得 DecodedJWT 则说明通过秘钥能够将加密 Token 进行解密
 			// 提取绑定在 Token 中的有效载荷信息
-			String id = decodedJWT.getClaim("id").asString();
-			return id;
+			Map<String, Object> params = decodedJWT.getClaim("messages").asMap();
+			return params;
 		}
 
-		return "";
+		return null;
 	}
 }

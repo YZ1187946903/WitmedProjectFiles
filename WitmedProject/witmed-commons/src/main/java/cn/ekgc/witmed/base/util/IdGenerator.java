@@ -1,11 +1,11 @@
-package cn.ekgc.witmed.util;
+package cn.ekgc.witmed.base.util;
 
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
 /**
- * <b>智慧医疗-主键生成工具类</b>
+ * <b>主键生成工具类</b>
  * <p>
  *     <b>系统数据库主键使用SnowFlake算法（雪花算法）生成全局唯一的id</b>
  * </p>
@@ -25,7 +25,6 @@ import java.util.Random;
  * </p>
  * @author Arthur
  * @version 1.0.0
- * @since 1.0.0
  */
 @Component("idGenerator")
 public class IdGenerator {

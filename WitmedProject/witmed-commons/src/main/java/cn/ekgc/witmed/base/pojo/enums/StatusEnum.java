@@ -1,7 +1,7 @@
 package cn.ekgc.witmed.base.pojo.enums;
 
 /**
- * <b>智慧医疗-系统状态枚举信息</b>
+ * <b>系统状态枚举信息</b>
  * @author Arthur
  * @version 1.0.0
  */

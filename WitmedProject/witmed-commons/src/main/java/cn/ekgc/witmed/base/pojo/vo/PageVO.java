@@ -1,12 +1,10 @@
 package cn.ekgc.witmed.base.pojo.vo;
 
-import cn.ekgc.witmed.util.Constants;
-
 import java.io.Serializable;
 import java.util.List;
 
 /**
- * <b>智慧医疗-系统分页视图信息</b>
+ * <b>系统分页视图信息</b>
  * @param <E>
  *
  * @author Arthur
@@ -26,13 +24,13 @@ public class PageVO<E> implements Serializable {
 		if (pageNum != null && pageNum > 0) {
 			this.pageNum = pageNum;
 		} else {
-			this.pageNum = Constants.PAGE_NUM;
+			this.pageNum = 1;
 		}
 
 		if (pageSize != null && pageSize > 0) {
 			this.pageSize = pageSize;
 		} else {
-			this.pageSize = Constants.PAGE_SIZE;
+			this.pageSize = 10;
 		}
 	}
 

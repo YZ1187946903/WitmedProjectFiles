@@ -1,6 +1,6 @@
 ########## 配置项目启动端口号
 server:
-  port: 11111
+  port: 9999
 spring:
   ########## 设定项目应用名
   application:

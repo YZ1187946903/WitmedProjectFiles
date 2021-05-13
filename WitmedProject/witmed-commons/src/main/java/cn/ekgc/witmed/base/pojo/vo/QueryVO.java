@@ -3,7 +3,7 @@ package cn.ekgc.witmed.base.pojo.vo;
 import java.io.Serializable;
 
 /**
- * <b>智慧医疗-系统查询视图信息</b>
+ * <b>系统查询视图信息</b>
  * @param <E>
  *
  * @author Arthur

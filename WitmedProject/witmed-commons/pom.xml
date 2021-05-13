@@ -20,6 +20,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<java-jwt.version>3.15.0</java-jwt.version>
+		<java-sms-sdk.version>1.0.4</java-sms-sdk.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +38,13 @@
 		</dependency>
 		<!-- 配置 Spring Cloud Starter OpenFegin 依赖 [END] -->
 
+		<!-- 配置 Spring Boot Starter Data Redis 依赖 [BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- 配置 Spring Boot Starter Data Redis 依赖 [END] -->
+
 		<!-- 配置 Java JWT 依赖 [BEGIN] -->
 		<dependency>
 			<groupId>com.auth0</groupId>
@@ -44,6 +52,14 @@
 			<version>${java-jwt.version}</version>
 		</dependency>
 		<!-- 配置 Java JWT 依赖 [END] -->
+
+		<!-- 配置容联云短信发送 SDK 依赖 [BEGIN] -->
+		<dependency>
+			<groupId>com.cloopen</groupId>
+			<artifactId>java-sms-sdk</artifactId>
+			<version>${java-sms-sdk.version}</version>
+		</dependency>
+		<!-- 配置容联云短信发送 SDK 依赖 [END] -->
 
 		<dependency>
 			<groupId>junit</groupId>

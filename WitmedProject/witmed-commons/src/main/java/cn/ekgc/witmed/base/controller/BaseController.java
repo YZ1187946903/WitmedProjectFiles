@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * <b>智慧医疗-基础控制层类</b>
+ * <b>基础控制层类</b>
  * @author Arthur
  * @version 1.0.0
  */
